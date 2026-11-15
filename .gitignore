@@ -1,0 +1,37 @@
+# Compiled Java class files and build artifacts
+target/
+*.class
+
+# Log files
+*.log
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Virtual Machine Crash Logs
+hs_err_pid*
+replay_pid*
+
+# IDE / Editor Files
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+.classpath
+.project
+.settings/
+.springBeans
+
+# Competitive Programming / Scratch extensions
+.cph/
+
+# OS generated files
+.DS_Store
+Thumbs.db

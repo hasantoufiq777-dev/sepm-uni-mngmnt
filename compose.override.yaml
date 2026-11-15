@@ -1,0 +1,13 @@
+# Development helper. Docker Compose loads this file automatically together with compose.yaml.
+# It lets the app serve the frontend (HTML/CSS/JS) straight from your project folder,
+# so saving index.html, app.js or style.css shows up after a browser refresh (Ctrl+F5) - no rebuild needed.
+# Java changes still need a rebuild: run rebuild.bat.
+# To turn this off, delete or rename this file and run: docker compose up -d
+
+services:
+  app:
+    environment:
+      # Look in the mounted folder first, then fall back to the files inside the jar
+      SPRING_WEB_RESOURCES_STATIC_LOCATIONS: file:/static/,classpath:/static/
+    volumes:
+      - ./src/main/resources/static:/static:ro
